@@ -12,11 +12,33 @@
 // --Se non è multiplo di 3 né di 5 
 // ---stampo il numero che sto analizzando
 
-
+const container = document.querySelector('main');
 // FOR
-
 for (let i = 1; i <= 100; i++) {
 
-    console.log('i', i,typeof i);
+    if (i % 3 == 0 && i % 5 == 0) {
+        console.log('FizzBuzz');
+        const newElement = document.createElement('div');
+        newElement.innerHTML = 'FizzBuzz';
+        container.append(newElement);
+    }
+    else if (i % 3 == 0){ 
+        console.log('Fizz');
+        const newElement = document.createElement('div');
+        newElement.innerHTML = 'Fizz';
+        container.append(newElement);
+    }
+    else if (i % 5 == 0) {
+        console.log('Buzz');
+        const newElement = document.createElement('div');
+        newElement.innerHTML = 'Buzz';
+        container.append(newElement);
+    }
+    else {
+        console.log('i', i , typeof i);
+        const newElement = document.createElement('div');
+        newElement.innerHTML = i;
+        container.append(newElement);
+    }
     
 }
